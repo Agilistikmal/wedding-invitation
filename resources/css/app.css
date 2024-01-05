@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #e29578;
+    --secondary: #ffddd2;
+    --white: #edf6f9;
+}
+
+@font-face {
+    font-family: "Callifornia";
+    src: url("/public/fonts/Callifornia.otf");
+}
+@font-face {
+    font-family: "Laviossa";
+    src: url("/public/fonts/Laviossa-Medium.otf");
+}
+
+#header {
+    background-image: url("/public/imgs/wedding.jpg");
+    object-fit: cover;
+}
+
+.button {
+    @apply block w-max rounded-xl mx-auto font-bold text-white bg-[--primary] py-2 px-5 hover:bg-[--secondary] hover:text-black hover:-translate-y-1 transition duration-500;
+}
+
+input,
+textarea,
+.input {
+    @apply w-full outline-none rounded-lg p-2 bg-[--secondary] text-black;
+}
+
+a {
+    @apply text-yellow-100;
+}
+#contact a {
+    @apply text-black/50;
+}
+
+#invitation b {
+    @apply text-yellow-50;
+}
