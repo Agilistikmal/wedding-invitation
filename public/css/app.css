@@ -1,0 +1,67 @@
+:root {
+    --primary: #e29578;
+    --secondary: #ffddd2;
+    --white: #edf6f9;
+}
+
+@font-face {
+    font-family: "Callifornia";
+    src: url("/fonts/Callifornia.otf");
+}
+@font-face {
+    font-family: "Laviossa";
+    src: url("/fonts/Laviossa-Medium.otf");
+}
+
+#header {
+    background-image: url("/imgs/wedding.jpg");
+    object-fit: cover;
+}
+
+.button {
+    display: block;
+    width: max-content;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--primary);
+    padding: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: all;
+    transition-duration: 500ms;
+}
+.button:hover {
+    color: black;
+    --tw-translate-y: -0.25rem /* -4px */;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+        scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+input,
+textarea,
+.input {
+    width: 100%;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: var(--secondary);
+    color: black;
+}
+
+a {
+    --tw-text-opacity: 1;
+    color: rgb(254 249 195 / var(--tw-text-opacity));
+}
+#contact a {
+    color: rgb(0 0 0 / 0.5);
+}
+
+#invitation b {
+    --tw-text-opacity: 1;
+    color: rgb(254 252 232 / var(--tw-text-opacity));
+}

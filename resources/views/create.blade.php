@@ -14,7 +14,7 @@
         @else
         <div class="rounded-xl p-5 bg-green-500 text-black mb-2">
             <p>Berhasil! Undangan online anda dapat diakses melalui:</p>
-            <span><a href="/i/{{ $data->slug }}">wedding.safatanc.com/i/{{ $data->slug }}</a></span>
+            <span><a href="/i/{{ $data['slug'] }}">wedding.safatanc.com/i/{{ $data['slug'] }}</a></span>
         </div>
         @endif
         @endif

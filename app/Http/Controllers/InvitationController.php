@@ -47,7 +47,7 @@ class InvitationController extends Controller
                 "data" => $slug
             ]);
         }
-        $data = $data[0];
+        $data = $data->first();
         return view("detail", [
             "error" => false,
             "data" => $data
