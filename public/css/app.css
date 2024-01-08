@@ -13,9 +13,8 @@
     src: url("/fonts/Laviossa-Medium.otf");
 }
 
-#header {
-    background-image: url("/imgs/wedding.jpg");
-    object-fit: cover;
+html {
+    scroll-behavior: smooth;
 }
 
 .button {
@@ -56,12 +55,92 @@ textarea,
 a {
     --tw-text-opacity: 1;
     color: rgb(254 249 195 / var(--tw-text-opacity));
+    transition: all;
+    transition-duration: 500ms;
 }
-#contact a {
-    color: rgb(0 0 0 / 0.5);
+nav a:hover {
+    scale: 1.1;
 }
 
 #invitation b {
     --tw-text-opacity: 1;
     color: rgb(254 252 232 / var(--tw-text-opacity));
+}
+
+@keyframes slideLeftToRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideRightToLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes scaleUp {
+    0% {
+        scale: 0.9;
+    }
+    50% {
+        scale: 0.9;
+    }
+    100% {
+        scale: 1;
+    }
+}
+@keyframes scaleUpSlideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+        scale: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+#about {
+    animation: 0.8s ease-out 0s 1 slideLeftToRight;
+}
+#contact {
+    animation: 0.8s ease-out 0s 1 slideRightToLeft;
+}
+#create {
+    animation: 0.8s ease-out 0s 1 scaleUpSlideUp;
+}
+#header .content {
+    animation: 0.8s ease-out 0s 1 scaleUpSlideUp;
+}
+
+nav .nav-1 {
+    padding: 8px;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    color: var(--white);
+}
+
+nav .nav-2 {
+    padding: 8px;
+    color: var(--white);
+}
+
+.slides {
+    min-height: 100dvh;
+    object-fit: cover;
+}
+
+#create form {
+    background-color: rgb(226, 149, 120, 0.7);
 }
