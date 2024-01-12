@@ -22,7 +22,11 @@ Route::get("/", function () {
 // Invitation
 Route::get("/create", [InvitationController::class, 'index']);
 Route::post("/create", [InvitationController::class, 'create']);
+Route::get("/edit/{slug}", [InvitationController::class, 'edit']);
+Route::post("/edit/{slug}", [InvitationController::class, 'update']);
+Route::get("/delete/{slug}", [InvitationController::class, 'delete']);
 Route::get("/i/{slug}", [InvitationController::class, 'detail']);
+Route::get("/dashboard", [InvitationController::class, 'dashboard']);
 
 // Authentication
 Route::get("/login", [AuthController::class, "login"])->middleware("guest");
@@ -30,3 +34,5 @@ Route::post("/login", [AuthController::class, "authenticate"]);
 
 Route::get("/register", [AuthController::class, "register"]);
 Route::post("/register", [AuthController::class, "create"]);
+
+Route::get("/logout", [AuthController::class, "logout"]);

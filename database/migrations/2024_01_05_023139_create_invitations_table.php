@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('invitations', function (Blueprint $table) {
             $table->increments("id");
+            $table->string("author_username");
             $table->string("slug")->unique();
             $table->string("nama_pria");
             $table->string("nama_wanita");

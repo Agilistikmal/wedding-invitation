@@ -31,6 +31,7 @@ html {
     padding-bottom: 8px;
     transition: all;
     transition-duration: 500ms;
+    text-align: center;
 }
 .button:hover {
     color: black;
@@ -133,11 +134,13 @@ nav .nav-1 {
     border: 2px solid var(--secondary);
     border-radius: 10px;
     color: var(--white);
+    text-align: center;
 }
 
 nav .nav-2 {
     padding: 8px;
     color: var(--white);
+    text-align: center;
 }
 
 .slides {

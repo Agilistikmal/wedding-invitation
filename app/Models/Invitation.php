@@ -9,5 +9,5 @@ class Invitation extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['slug', 'nama_pria', 'nama_wanita', 'alamat', 'tanggal', 'waktu_mulai', 'waktu_selesai'];
+    protected $fillable = ['slug', 'nama_pria', 'nama_wanita', 'alamat', 'tanggal', 'waktu_mulai', 'waktu_selesai', 'author_username'];
 }
